@@ -1,4 +1,4 @@
-VPN Detector API
+VPN Proxy Detector API
 ============
 
 VPN Detector is a simple tool for detecting VPN usage. It returns a boolean value indicating whether the IP address is using a VPN or not.
@@ -7,7 +7,7 @@ VPN Detector is a simple tool for detecting VPN usage. It returns a boolean valu
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [VPN Detector API](https://apiverve.com/marketplace/api/vpndetector)
+This is a Javascript Wrapper for the [VPN Proxy Detector API](https://apiverve.com/marketplace/api/vpndetector)
 
 ---
 
@@ -25,7 +25,7 @@ You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ## Usage
 
-The VPN Detector API documentation is found here: [https://docs.apiverve.com/api/vpndetector](https://docs.apiverve.com/api/vpndetector).  
+The VPN Proxy Detector API documentation is found here: [https://docs.apiverve.com/api/vpndetector](https://docs.apiverve.com/api/vpndetector).  
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -74,7 +74,7 @@ api.execute(query, function (error, data) {
     "ip": "103.62.49.210",
     "is_vpn": false,
     "is_datacenter": true,
-    "checked_on": "2025-02-03",
+    "checked_on": "2025-02-20",
     "risk_level": "High",
     "threat_level": "Moderate"
   },
@@ -104,7 +104,7 @@ All usage of the APIVerve website, API, and services is subject to the [APIVerve
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2024 APIVerve, and Evlar LLC
+Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
