@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/vpndetector",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "VPN Detector is a simple tool for detecting VPN usage. It returns a boolean value indicating whether the IP address is using a VPN or not.",
   "main": "index.js",
   "scripts": {
