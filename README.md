@@ -1,5 +1,4 @@
-VPN Proxy Detector API
-============
+# VPN Proxy Detector API
 
 VPN Detector is a simple tool for detecting VPN usage. It returns a boolean value indicating whether the IP address is using a VPN or not.
 
@@ -7,54 +6,62 @@ VPN Detector is a simple tool for detecting VPN usage. It returns a boolean valu
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [VPN Proxy Detector API](https://apiverve.com/marketplace/api/vpndetector)
+This is a Javascript Wrapper for the [VPN Proxy Detector API](https://apiverve.com/marketplace/vpndetector)
 
 ---
 
 ## Installation
-	npm install @apiverve/vpndetector --save
+
+Using npm:
+```shell
+npm install @apiverve/vpndetector
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/vpndetector
+```
 
 ---
 
 ## Configuration
 
-Before using the vpndetector API client, you have to setup your account and obtain your API Key.  
+Before using the VPN Proxy Detector API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The VPN Proxy Detector API documentation is found here: [https://docs.apiverve.com/api/vpndetector](https://docs.apiverve.com/api/vpndetector).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The VPN Proxy Detector API documentation is found here: [https://docs.apiverve.com/ref/vpndetector](https://docs.apiverve.com/ref/vpndetector).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var vpndetectorAPI = require('@apiverve/vpndetector');
-var api = new vpndetectorAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const vpndetectorAPI = require('@apiverve/vpndetector');
+const api = new vpndetectorAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
+```javascript
 var query = {
   ip: "103.62.49.210"
 };
-```
 
-###### Simple Request (using Callback)
-
-```
 api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
@@ -64,9 +71,52 @@ api.execute(query, function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+var query = {
+  ip: "103.62.49.210"
+};
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    var query = {
+  ip: "103.62.49.210"
+};
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -77,8 +127,7 @@ api.execute(query, function (error, data) {
     "checked_on": "2025-02-20",
     "risk_level": "High",
     "threat_level": "Moderate"
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -91,6 +140,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
